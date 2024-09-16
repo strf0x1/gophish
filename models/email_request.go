@@ -119,9 +119,9 @@ func (s *EmailRequest) Generate(msg *gomail.Message) error {
 
 	// Add the transparency headers
 	msg.SetHeader("X-Mailer", config.ServerName)
-	if conf.ContactAddress != "" {
+	/*if conf.ContactAddress != "" {
 		msg.SetHeader("X-Gophish-Contact", conf.ContactAddress)
-	}
+	}*/
 
 	// Parse the customHeader templates
 	for _, header := range s.SMTP.Headers {
